@@ -1,0 +1,20 @@
+user (認証情報)
+  user_id:string
+  psssword:string
+
+user_info (ユーザー情報)
+  trainings
+
+training
+  title:string
+  is_public:boolean
+  training_amount:integer
+  
+  has_many :text_sets
+
+text_set
+  text:string
+  kana:string
+  training_id:integer
+
+  belongs_to :training
